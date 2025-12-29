@@ -1,0 +1,65 @@
+---
+const navItems = [
+  { href: '#hero', label: 'Home' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#about', label: 'About' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#hero" class="text-xl font-bold text-gray-900 hover:text-gray-600 transition-colors">
+        Portfolio
+      </a>
+
+      <button
+        id="mobile-menu-button"
+        class="md:hidden p-2 text-gray-600 hover:text-gray-900"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <ul
+        id="nav-menu"
+        class="hidden md:flex items-center gap-8 flex-col md:flex-row"
+      >
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="block text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuButton?.addEventListener('click', () => {
+    const isHidden = navMenu?.classList.contains('hidden');
+    navMenu?.classList.toggle('hidden');
+    menuButton?.setAttribute('aria-expanded', String(!isHidden));
+  });
+
+  const navLinks = navMenu?.querySelectorAll('a');
+  navLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu?.classList.add('hidden');
+      menuButton?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
