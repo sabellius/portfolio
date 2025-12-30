@@ -8,16 +8,16 @@ const navItems = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+<header class="sticky top-0 z-50 bg-dark-400 border-b border-dark-300">
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <a href="#hero" class="text-xl font-bold text-gray-900 hover:text-gray-600 transition-colors">
-        Portfolio
+      <a href="#hero" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <img src="/src/assets/logo.svg" alt="Portfolio Logo" class="h-8 w-auto" />
       </a>
 
       <button
         id="mobile-menu-button"
-        class="md:hidden p-2 text-gray-600 hover:text-gray-900"
+        class="md:hidden p-2 text-gray-300 hover:text-white"
         aria-label="Toggle menu"
         aria-expanded="false"
       >
@@ -34,7 +34,7 @@ const navItems = [
           <li>
             <a
               href={item.href}
-              class="block text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              class="block text-sm font-medium text-gray-300 hover:text-primary transition-colors"
             >
               {item.label}
             </a>
