@@ -11,35 +11,49 @@ const navItems = [
 <header class="sticky top-0 z-50 bg-dark-400 border-b border-dark-300">
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <a href="#hero" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-        <img src="/src/assets/logo.svg" alt="Portfolio Logo" class="fill-white h-16 w-auto" />
+      <a
+        href="#hero"
+        class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <img
+          src="/src/assets/logo.svg"
+          alt="Portfolio Logo"
+          class="fill-white h-16 w-auto"
+        />
       </a>
 
       <button
         id="mobile-menu-button"
         class="md:hidden p-2 text-gray-300 hover:text-white"
         aria-label="Toggle menu"
-        aria-expanded="false"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        aria-expanded="false">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
 
       <ul
         id="nav-menu"
-        class="hidden md:flex items-center gap-8 flex-col md:flex-row"
-      >
-        {navItems.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              class="block text-sm font-medium text-gray-300 hover:text-primary transition-colors"
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
+        class="hidden md:flex items-center gap-8 flex-col md:flex-row">
+        {
+          navItems.map(item => (
+            <li>
+              <a
+                href={item.href}
+                class="nav-link block text-sm font-medium text-gray-300 hover:text-primary transition-colors"
+                data-section={item.href.slice(1)}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </nav>
@@ -62,4 +76,42 @@ const navItems = [
       menuButton?.setAttribute('aria-expanded', 'false');
     });
   });
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinksAll = document.querySelectorAll('.nav-link');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -60% 0px', // Trigger when section is in middle of viewport
+    threshold: 0,
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinksAll.forEach(link => {
+          link.classList.remove('text-primary');
+          link.classList.add('text-gray-300');
+        });
+
+        const activeLink = document.querySelector(
+          `.nav-link[data-section="${entry.target.id}"]`
+        );
+        if (activeLink) {
+          activeLink.classList.remove('text-gray-300');
+          activeLink.classList.add('text-primary');
+        }
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
+
+  if (window.scrollY < 100) {
+    const firstLink = document.querySelector('.nav-link[data-section="hero"]');
+    if (firstLink) {
+      firstLink.classList.remove('text-gray-300');
+      firstLink.classList.add('text-primary');
+    }
+  }
 </script>

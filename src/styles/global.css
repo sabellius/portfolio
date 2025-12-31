@@ -11,3 +11,7 @@
   --color-card: #252d3d;
   --color-border-accent: #00d9ff;
 }
+
+html {
+  scroll-behavior: smooth;
+}
