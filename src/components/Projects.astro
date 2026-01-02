@@ -3,16 +3,19 @@ import { Icon } from 'astro-icon/components';
 
 const projects = [
   {
-    title: 'Project One',
+    title: 'Kanbox',
     description:
-      'A brief description of your project, what it does, and the technologies used.',
+      'A powerful Kanban board application for task management and project tracking. Features drag-and-drop functionality, labels, authorization, and more.',
     tags: [
       { icon: 'mdi:react', label: 'React' },
+      { icon: 'simple-icons:redux', label: 'Redux' },
+      { icon: 'simple-icons:mui', label: 'MUI' },
       { icon: 'mdi:nodejs', label: 'Node.js' },
       { icon: 'simple-icons:mongodb', label: 'MongoDB' },
     ],
-    github: 'https://github.com/yourusername/project',
+    github: 'https://github.com/sabellius/kanbox',
     demo: 'https://project-demo.com',
+    image: '/images/projects/kanbox.png',
   },
   {
     title: 'Project Two',
@@ -65,36 +68,50 @@ const projects = [
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {
           projects.map(project => (
-            <article class="bg-card border border-dark-200 rounded-lg p-6 hover:border-primary hover:shadow-lg transition-all">
-              <h3 class="text-2xl font-bold text-white mb-3">
-                {project.title}
-              </h3>
-              <p class="text-gray-300 mb-4">{project.description}</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                {project.tags.map(tag => (
-                  <span class="flex items-center gap-1 text-gray-400 hover:text-gray-100">
-                    <Icon name={tag.icon} class="w-5 h-5 fill-current" />
-                    {tag.label}
-                  </span>
-                ))}
-              </div>
-              <div class="flex gap-3">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex items-center -ml-3 gap-2 text-sm font-medium text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors">
-                  <Icon name="mdi:github" class="w-5 h-5 fill-current" />
-                  <span>GitHub</span>
-                </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex items-center -ml-3 gap-2 text-sm font-medium text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors">
-                  <Icon name="mdi:external-link" class="w-5 h-5 fill-current" />
-                  <span>Live Demo</span>
-                </a>
+            <article class="bg-card border border-dark-200 rounded-lg overflow-hidden hover:border-primary hover:shadow-lg transition-all">
+              {project.image && (
+                <div class="relative w-full overflow-hidden bg-dark-400">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    class="w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              )}
+              <div class="p-6">
+                <h3 class="text-2xl font-bold text-white">{project.title}</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                  {project.description}
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  {project.tags.map(tag => (
+                    <span class="flex items-center gap-1.5 text-gray-400 hover:text-gray-100 transition-colors">
+                      <Icon name={tag.icon} class="w-4 h-4 fill-current" />
+                      {tag.label}
+                    </span>
+                  ))}
+                </div>
+                <div class="flex gap-3 pt-4 border-t border-dark-200">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center -ml-3 gap-2 text-sm font-medium text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors">
+                    <Icon name="mdi:github" class="w-5 h-5 fill-current" />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center -ml-3 gap-2 text-sm font-medium text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors">
+                    <Icon
+                      name="mdi:external-link"
+                      class="w-5 h-5 fill-current"
+                    />
+                    <span>Live Demo</span>
+                  </a>
+                </div>
               </div>
             </article>
           ))
