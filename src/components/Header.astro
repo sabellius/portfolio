@@ -32,13 +32,13 @@ const navItems = [
 
       <ul
         id="nav-menu"
-        class="hidden md:flex items-center gap-8 flex-col md:flex-row absolute top-full left-0 right-0 bg-dark-400 border-b border-dark-300 shadow-lg py-4 px-6 md:static md:shadow-none md:border-0 md:py-0 md:px-0">
+        class="hidden md:flex items-center gap-8 flex-col md:flex-row absolute top-full left-0 right-0 bg-dark-400 border-b border-primary/30 shadow-2xl py-4 px-6 md:static md:bg-transparent md:shadow-none md:border-0 md:py-0 md:px-0">
         {
           navItems.map(item => (
             <li>
               <a
                 href={item.href}
-                class="nav-link block text-sm font-medium text-gray-300 hover:text-primary transition-colors"
+                class="nav-link block text-sm font-medium text-gray-300 hover:text-primary transition-colors cursor-pointer"
                 data-section={item.href.slice(1)}>
                 {item.label}
               </a>
