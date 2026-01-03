@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 const navItems = [
   { href: '#hero', label: 'Home' },
   { href: '#projects', label: 'Projects' },
@@ -8,7 +10,7 @@ const navItems = [
 ---
 
 <header class="sticky top-0 z-50 bg-dark-400 border-b border-dark-300">
-  <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
     <div class="flex items-center justify-between h-16">
       <a
         href="#hero"
@@ -25,22 +27,12 @@ const navItems = [
         class="md:hidden p-2 text-gray-300 hover:text-white"
         aria-label="Toggle menu"
         aria-expanded="false">
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+        <Icon name="mdi:menu" class="w-8 h-8 fill-current" />
       </button>
 
       <ul
         id="nav-menu"
-        class="hidden md:flex items-center gap-8 flex-col md:flex-row">
+        class="hidden md:flex items-center gap-8 flex-col md:flex-row absolute top-full left-0 right-0 bg-dark-400 border-b border-dark-300 shadow-lg py-4 px-6 md:static md:shadow-none md:border-0 md:py-0 md:px-0">
         {
           navItems.map(item => (
             <li>
