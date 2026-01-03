@@ -12,16 +12,6 @@ const navItems = [
 <header class="sticky top-0 z-50 bg-dark-400 border-b border-dark-300">
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
     <div class="flex items-center justify-between h-16">
-      <a
-        href="#hero"
-        class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-        <img
-          src="/images/logo.webp"
-          alt="Portfolio Logo"
-          class="fill-white h-16 w-auto"
-        />
-      </a>
-
       <button
         id="mobile-menu-button"
         class="md:hidden p-2 text-gray-300 hover:text-white"
@@ -29,6 +19,16 @@ const navItems = [
         aria-expanded="false">
         <Icon name="mdi:menu" class="w-8 h-8 fill-current" />
       </button>
+
+      <a
+        href="#hero"
+        class="hidden md:flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <img
+          src="/images/logo.webp"
+          alt="Portfolio Logo"
+          class="fill-white h-16 w-auto"
+        />
+      </a>
 
       <ul
         id="nav-menu"
