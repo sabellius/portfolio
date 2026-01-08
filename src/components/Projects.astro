@@ -14,7 +14,7 @@ const projects = [
       { icon: 'simple-icons:mongodb', label: 'MongoDB' },
     ],
     github: 'https://github.com/sabellius/kanbox',
-    demo: 'https://project-demo.com',
+    // demo: 'https://project-demo.com',
     image: '/images/projects/kanbox.png',
   },
   {
@@ -26,7 +26,7 @@ const projects = [
       { icon: 'mdi:tailwind', label: 'Tailwind CSS' },
     ],
     github: 'https://github.com/sabellius/agalapp',
-    demo: 'https://project-demo.com',
+    demo: null,
     image: '/images/coming_soon_placeholder.svg',
   },
 ];
@@ -76,17 +76,19 @@ const projects = [
                     <Icon name="mdi:github" class="w-5 h-5 fill-current" />
                     <span>GitHub</span>
                   </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex items-center -ml-3 gap-2 text-sm font-medium text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors">
-                    <Icon
-                      name="mdi:external-link"
-                      class="w-5 h-5 fill-current"
-                    />
-                    <span>Live Demo</span>
-                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex items-center -ml-3 gap-2 text-sm font-medium text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors">
+                      <Icon
+                        name="mdi:external-link"
+                        class="w-5 h-5 fill-current"
+                      />
+                      <span>Live Demo</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
