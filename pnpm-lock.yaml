@@ -11,6 +11,9 @@ importers:
       '@fontsource/inter':
         specifier: ^5.2.8
         version: 5.2.8
+      '@iconify-json/lineicons':
+        specifier: ^1.2.6
+        version: 1.2.6
       '@iconify-json/mdi':
         specifier: ^1.2.3
         version: 1.2.3
@@ -237,6 +240,9 @@ packages:
 
   '@fontsource/inter@5.2.8':
     resolution: {integrity: sha512-P6r5WnJoKiNVV+zvW2xM13gNdFhAEpQ9dQJHt3naLvfg+LkF2ldgSLiF4T41lf1SQCM9QmkqPTn4TH568IRagg==}
+
+  '@iconify-json/lineicons@1.2.6':
+    resolution: {integrity: sha512-XDOzb5xUNxpOj0j2JPadPq4udrhYb92d6jT7jey9CAJfGhSyYMzk5vmNqWormZy0ETxiHojs2ERpY9KjLjt7rA==}
 
   '@iconify-json/mdi@1.2.3':
     resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
@@ -2050,6 +2056,10 @@ snapshots:
     optional: true
 
   '@fontsource/inter@5.2.8': {}
+
+  '@iconify-json/lineicons@1.2.6':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/mdi@1.2.3':
     dependencies:
