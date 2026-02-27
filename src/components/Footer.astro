@@ -10,39 +10,48 @@ import { SITE_CONFIG } from '../config';
         Made By Saveliy Shiryaev {new Date().getFullYear()}©
       </p>
 
-      <div class="flex gap-6">
+      <div class="flex flex-wrap justify-center gap-3 sm:gap-6">
         <a
           href={SITE_CONFIG.resumeUrl}
           download
-          class="flex items-center gap-2 text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors"
+          class="flex items-center gap-2 text-gray-400 hover:bg-primary hover:text-dark-100 px-2 py-1.5 sm:px-3 sm:py-2 rounded-lg transition-colors"
           aria-label="Download Resume">
-          <Icon name="mdi:file-document-outline" class="w-8 h-8 fill-current" />
-          <span>Resume</span>
+          <Icon
+            name="mdi:file-document-outline"
+            class="w-6 h-6 sm:w-8 sm:h-8 fill-current"
+          />
+          <span class="text-sm sm:text-base">Resume</span>
         </a>
         <a
           href={SITE_CONFIG.github}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-2 text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors"
+          class="flex items-center gap-2 text-gray-400 hover:bg-primary hover:text-dark-100 px-2 py-1.5 sm:px-3 sm:py-2 rounded-lg transition-colors"
           aria-label="GitHub">
-          <Icon name="mdi:github" class="w-8 h-8 fill-current" />
-          <span>GitHub</span>
+          <Icon name="mdi:github" class="w-6 h-6 sm:w-8 sm:h-8 fill-current" />
+          <span class="text-sm sm:text-base">GitHub</span>
         </a>
         <a
           href={SITE_CONFIG.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-2 text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors"
+          class="flex items-center gap-2 text-gray-400 hover:bg-primary hover:text-dark-100 px-2 py-1.5 sm:px-3 sm:py-2 rounded-lg transition-colors"
           aria-label="LinkedIn">
-          <Icon name="mdi:linkedin" class="w-8 h-8 fill-current" />
-          <span>LinkedIn</span>
+          <Icon
+            name="mdi:linkedin"
+            class="w-6 h-6 sm:w-8 sm:h-8 fill-current"
+          />
+          <span class="text-sm sm:text-base">LinkedIn</span>
         </a>
         <a
           href={SITE_CONFIG.email}
-          class="flex items-center gap-2 text-gray-400 hover:bg-primary hover:text-dark-100 px-3 py-2 rounded-lg transition-colors"
+          class="flex items-center gap-2 text-gray-400 hover:bg-primary hover:text-dark-100 px-2 py-1.5 sm:px-3 sm:py-2 rounded-lg transition-colors"
           aria-label="Email">
-          <Icon name="mdi:email-outline" class="w-8 h-8 fill-current" />
-          <span>Email</span>
+          <Icon
+            name="mdi:email-outline"
+            class="w-6 h-6 sm:w-8 sm:h-8 fill-current"
+          />
+          <span class="text-sm sm:text-base">Email</span>
         </a>
       </div>
     </div>
