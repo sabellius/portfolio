@@ -24,3 +24,9 @@ pnpm-debug.log*
 .idea/
 
 plans/
+
+# local planning
+ROADMAP.md
+
+# playwright-cli artifacts
+.playwright-cli/
