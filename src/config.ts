@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   resumeUrl: '/documents/resume.pdf',
   github: 'https://github.com/sabellius',
   linkedin: 'https://linkedin.com/in/saveliy-shiryaev',
-  email: 'mailto:saveliy.dev@gmail.com',
+  email: 'mailto:saveliy.dev@pm.me',
 } as const;
 
 interface Tag {
@@ -28,6 +28,59 @@ interface SkillCategory {
   category: string;
   skills: string[];
 }
+
+interface TimelineEntry {
+  title: string;
+  organization: string;
+  description: string;
+  period: string;
+}
+
+interface TimelineSection {
+  label: string;
+  entries: TimelineEntry[];
+}
+
+export const TIMELINE: TimelineSection[] = [
+  {
+    label: 'Work Experience',
+    entries: [
+      {
+        title: 'Full-Stack Web Developer',
+        organization: 'Biodata',
+        period: '2020 – 2022',
+        description:
+          'Built new features and maintained an Electronic Lab Notebook (ELN) platform for biotech research workflows. Contributed to architectural planning, led code reviews, and expanded test coverage.',
+      },
+      {
+        title: 'Military Police (Reserves)',
+        organization: 'Israel Defense Forces',
+        period: '2023 – 2024',
+        description:
+          'Volunteered for reserve service following the outbreak of the war on October 7th, serving through early 2024.',
+      },
+    ],
+  },
+  {
+    label: 'Education',
+    entries: [
+      {
+        title: 'Full-Stack Developer Bootcamp',
+        organization: 'Coding Academy',
+        period: '2025',
+        description:
+          'Intensive 14-week program for experienced developers, covering modern full-stack technologies through project-based learning.',
+      },
+      {
+        title: 'Full-Stack Developer Program',
+        organization: 'WeCode — Reichman University',
+        period: '2019 – 2020',
+        description:
+          'Professional full-stack web development training in partnership with Experis Software R&D.',
+      },
+    ],
+  },
+];
 
 export const PROJECTS: Project[] = [
   {
@@ -79,12 +132,13 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       'CSS',
       'JavaScript',
       'TypeScript',
-      'Ruby',
       'React',
+      'Next.js',
       'Redux',
       'Tailwind CSS',
       'Bootstrap',
       'Material UI',
+      'Astro',
     ],
   },
   {
@@ -92,11 +146,19 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       'Node.js',
       'Express',
-      'MongoDB',
-      'MySQL',
       'Ruby on Rails',
+      'Flask',
+      'Python',
       'REST APIs',
       'Authentication & Authorization',
+    ],
+  },
+  {
+    category: 'Databases',
+    skills: [
+      'MongoDB',
+      'MySQL',
+      'Redis',
     ],
   },
   {
@@ -104,13 +166,21 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       'Git',
       'GitHub',
-      'Gitlab',
+      'GitLab',
       'AWS',
       'Docker',
       'Jenkins',
+      'CI/CD Pipelines',
       'Responsive Design',
-      'CI/CD pipelines',
       'Database Migrations',
+    ],
+  },
+  {
+    category: 'Languages',
+    skills: [
+      'Hebrew (Native)',
+      'English (Working Proficiency)',
+      'Russian (Basic)',
     ],
   },
 ];
