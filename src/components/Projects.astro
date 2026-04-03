@@ -21,6 +21,8 @@ import { PROJECTS } from '../config';
                     src={project.image}
                     alt={project.title}
                     class="w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               )}
