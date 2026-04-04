@@ -165,7 +165,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    category: 'DevOps & Tooling',
+    category: 'DevOps & Development Tools',
     skills: [
       'Git',
       'Docker',
@@ -173,6 +173,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       'Jenkins',
       'GitHub Actions',
       'Vite',
+      'Claude Code',
+      'Opencode',
     ],
   },
 ];
