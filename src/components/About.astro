@@ -1,5 +1,4 @@
 ---
-import { Icon } from 'astro-icon/components';
 import { SITE_CONFIG } from '../config';
 ---
 
@@ -29,13 +28,6 @@ import { SITE_CONFIG } from '../config';
       </div>
 
       <div class="mt-8 flex flex-wrap gap-3 sm:gap-4">
-        <a
-          href={SITE_CONFIG.resumeUrl}
-          download
-          class="px-4 py-2.5 sm:px-6 sm:py-3 bg-primary text-dark-100 font-medium rounded-lg hover:bg-primary-dark transition-colors inline-flex items-center gap-2 text-sm sm:text-base">
-          <Icon name="mdi:download" class="w-4 h-4 sm:w-5 sm:h-5" />
-          Download Resume
-        </a>
         <a
           href={SITE_CONFIG.github}
           target="_blank"
