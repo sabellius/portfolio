@@ -4,6 +4,9 @@ dist/
 # generated types
 .astro/
 
+# design mockups
+.superpowers/
+
 # dependencies
 node_modules/
 
