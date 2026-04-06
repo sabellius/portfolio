@@ -52,13 +52,6 @@ export const TIMELINE: TimelineSection[] = [
         description:
           'Built new features and maintained an Electronic Lab Notebook (ELN) platform for biotech research workflows. Contributed to architectural planning, led code reviews, and expanded test coverage.',
       },
-      {
-        title: 'Military Police (Reserves)',
-        organization: 'Israel Defense Forces',
-        period: '2023 – 2024',
-        description:
-          'Volunteered for reserve service following the outbreak of the war on October 7th, serving through early 2024.',
-      },
     ],
   },
   {
