@@ -3,7 +3,7 @@ import { SITE_CONFIG } from '../config';
 ---
 <section id="about" class="py-20 sm:py-20 bg-body">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl">
+    <div class="max-w-4xl reveal" data-reveal>
       <p class="text-[11px] sm:text-xs uppercase tracking-[3px] text-primary mb-2.5">About Me</p>
       <h2 class="text-[32px] font-bold text-white mb-3">Building things that matter</h2>
       <div class="space-y-3.5 text-base text-text-light leading-[1.8] max-w-[700px]">
@@ -33,7 +33,7 @@ import { SITE_CONFIG } from '../config';
         </p>
       </div>
 
-      <div class="mt-6 flex flex-wrap gap-2.5">
+      <div class="mt-6 flex flex-wrap gap-2.5 reveal reveal-delay-2" data-reveal>
         <a
           href={SITE_CONFIG.github}
           target="_blank"

@@ -3,13 +3,17 @@ import { PROJECTS } from '../config';
 ---
 <section id="projects" class="py-20 sm:py-20 bg-dark-100">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <p class="text-[11px] sm:text-xs uppercase tracking-[3px] text-primary mb-2.5">Work</p>
-    <h2 class="text-[32px] font-bold text-white mb-3">Projects</h2>
+    <div class="reveal" data-reveal>
+      <p class="text-[11px] sm:text-xs uppercase tracking-[3px] text-primary mb-2.5">Work</p>
+      <h2 class="text-[32px] font-bold text-white mb-3">Projects</h2>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[800px] mt-10">
       {
-        PROJECTS.map(project => (
-          <article class="bg-card border-2 border-dark-300 rounded-xl overflow-hidden transition-colors duration-200 ease-out hover:border-glow-2xl cursor-pointer flex flex-col">
+        PROJECTS.map((project, i) => {
+          const delay = i < 8 ? `reveal-delay-${i + 1}` : '';
+          return (
+          <article class={`reveal ${delay} bg-card border-2 border-dark-300 rounded-xl overflow-hidden transition-colors duration-200 ease-out hover:border-glow-2xl cursor-pointer flex flex-col`} data-reveal>
             {project.image && (
               <div class="w-full">
                 <img
@@ -40,7 +44,8 @@ import { PROJECTS } from '../config';
               </a>
             </div>
           </article>
-        ))
+          );
+        })
       }
     </div>
   </div>

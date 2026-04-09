@@ -11,6 +11,7 @@ import { SITE_CONFIG } from '../config';
       height: 400px;
       background: radial-gradient(circle, var(--color-glow-sm) 0%, transparent 70%);
       pointer-events: none;
+      animation: glow-drift 8s ease-in-out infinite alternate;
     }
     .name-gradient {
       background: linear-gradient(135deg, #34D399, #10B981);
@@ -18,18 +19,26 @@ import { SITE_CONFIG } from '../config';
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    .hero-animate {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: hero-fade-up 0.7s ease-out forwards;
+    }
+    .hero-delay-1 { animation-delay: 0.1s; }
+    .hero-delay-2 { animation-delay: 0.25s; }
+    .hero-delay-3 { animation-delay: 0.4s; }
   </style>
   <div class="hero-glow"></div>
   <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="max-w-4xl">
-      <p class="text-[11px] sm:text-xs uppercase tracking-[4px] text-primary mb-6">Full-Stack Developer</p>
-      <h1 class="text-[58px] sm:text-[58px] lg:text-[58px] font-bold text-white leading-[1.1] mb-3.5">
+      <p class="hero-animate hero-delay-1 text-[11px] sm:text-xs uppercase tracking-[4px] text-primary mb-6">Full-Stack Developer</p>
+      <h1 class="hero-animate hero-delay-2 text-[58px] sm:text-[58px] lg:text-[58px] font-bold text-white leading-[1.1] mb-3.5">
         Hi, I'm <span class="name-gradient">Saveliy</span>
       </h1>
-      <p class="text-lg text-text-muted max-w-[500px] leading-relaxed mb-8">
+      <p class="hero-animate hero-delay-2 text-lg text-text-muted max-w-[500px] leading-relaxed mb-8">
         Shipping software that actually works, not just looks like it does.
       </p>
-      <div class="flex flex-wrap gap-3">
+      <div class="hero-animate hero-delay-3 flex flex-wrap gap-3">
         <a
           href="#projects"
           class="inline-block px-7 py-[11px] bg-primary text-dark-100 font-semibold rounded-lg text-sm cursor-pointer transition-all duration-200 ease-out hover:brightness-110 hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_12px_var(--color-glow-xl)]">

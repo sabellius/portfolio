@@ -3,8 +3,10 @@ import { TIMELINE } from '../config';
 ---
 <section id="experience" class="py-20 sm:py-20 bg-dark-100">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <p class="text-[11px] sm:text-xs uppercase tracking-[3px] text-primary mb-2.5">Background</p>
-    <h2 class="text-[32px] font-bold text-white mb-3">Experience & Education</h2>
+    <div class="reveal" data-reveal>
+      <p class="text-[11px] sm:text-xs uppercase tracking-[3px] text-primary mb-2.5">Background</p>
+      <h2 class="text-[32px] font-bold text-white mb-3">Experience & Education</h2>
+    </div>
 
     <div class="max-w-[600px] space-y-10 mt-10">
       {
@@ -14,8 +16,9 @@ import { TIMELINE } from '../config';
             <div>
               {section.entries.map((entry, i) => {
                 const isLast = i === section.entries.length - 1;
+                const delay = i < 8 ? `reveal-delay-${i + 1}` : '';
                 return (
-                  <div class={`relative pl-7 pb-6 ${isLast ? 'border-l border-transparent' : 'border-l border-glow-lg'}`}>
+                  <div class={`reveal ${delay} relative pl-7 pb-6 ${isLast ? 'border-l border-transparent' : 'border-l border-glow-lg'}`} data-reveal>
                     <div class="absolute left-[-4px] top-1 w-[7px] h-[7px] rounded-full bg-primary" />
                     <p class="text-xs text-primary mb-1">{entry.period}</p>
                     <h4 class="text-base font-semibold text-white">{entry.title}</h4>

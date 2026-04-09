@@ -7,7 +7,7 @@ const navItems = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-dark-400/95 backdrop-blur-md border-b border-transparent">
+<header class="sticky top-0 z-50 bg-dark-400/95 backdrop-blur-md border-b border-transparent transition-border-color duration-300 ease-out" id="site-header">
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
     <div class="flex items-center justify-between h-16">
       <button
@@ -98,6 +98,21 @@ const navItems = [
       firstLink.classList.remove('text-gray-300');
       firstLink.classList.add('text-primary', 'active');
     }
+  }
+
+  const header = document.getElementById('site-header');
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 20) {
+        header.classList.remove('border-transparent');
+        header.classList.add('border-dark-300');
+      } else {
+        header.classList.remove('border-dark-300');
+        header.classList.add('border-transparent');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 </script>
 

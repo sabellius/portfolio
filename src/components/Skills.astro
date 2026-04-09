@@ -3,13 +3,17 @@ import { SKILL_CATEGORIES } from '../config';
 ---
 <section id="skills" class="py-20 sm:py-20 bg-body">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <p class="text-[11px] sm:text-xs uppercase tracking-[3px] text-primary mb-2.5">Toolkit</p>
-    <h2 class="text-[32px] font-bold text-white mb-3">Skills</h2>
+    <div class="reveal" data-reveal>
+      <p class="text-[11px] sm:text-xs uppercase tracking-[3px] text-primary mb-2.5">Toolkit</p>
+      <h2 class="text-[32px] font-bold text-white mb-3">Skills</h2>
+    </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[640px] mt-10">
       {
-        SKILL_CATEGORIES.map(category => (
-          <div>
+        SKILL_CATEGORIES.map((category, i) => {
+          const delay = i < 8 ? `reveal-delay-${i + 1}` : '';
+          return (
+          <div class={`reveal ${delay}`} data-reveal>
             <h3 class="text-base font-semibold text-white mb-3 pb-1.5 border-b border-glow-md">
               {category.category}
             </h3>
@@ -21,7 +25,8 @@ import { SKILL_CATEGORIES } from '../config';
               ))}
             </div>
           </div>
-        ))
+          );
+        })
       }
     </div>
   </div>

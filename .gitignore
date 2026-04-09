@@ -30,6 +30,7 @@ plans/
 
 # local planning
 ROADMAP.md
+AGENTS.md
 
 # playwright-cli artifacts
 .playwright-cli/
