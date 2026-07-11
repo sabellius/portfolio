@@ -52,6 +52,13 @@ export const TIMELINE: TimelineSection[] = [
         description:
           'Built new features and maintained an Electronic Lab Notebook (ELN) platform for biotech research workflows. Contributed to architectural planning, led code reviews, and expanded test coverage.',
       },
+      {
+        title: 'Full-Stack Developer',
+        organization: 'AdoptMe Israel',
+        period: 'Apr 2026 – Present',
+        description:
+          'Volunteer developer on the pet adoption platform (React Native, Express, TypeScript). Rebuilt the adoption workflow from a manual WhatsApp-based process into an automated pipeline: users submit applications through the app, which are routed to the relevant shelter admin dashboard with notifications across WhatsApp, Monday.com, email, and push notifications.',
+      },
     ],
   },
   {
