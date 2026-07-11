@@ -106,7 +106,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Agalapp',
     description:
-      'A website for finding and reviewing coffee trucks in Israel. Currently in development.',
+      'A Hebrew (RTL) coffee truck review platform for discovering and rating trucks across Israel. Features an interactive Leaflet map, star ratings with community voting, role-based access, and premium subscriptions.',
     tags: [
       { icon: 'simple-icons:nextdotjs', label: 'Next.js' },
       { icon: 'mdi:tailwind', label: 'Tailwind' },
@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
     ],
     github: 'https://github.com/sabellius/agalapp',
     demo: null,
-    image: '/images/coming_soon_placeholder.svg',
+    image: '/images/projects/agalapp.png',
   },
 ];
 
