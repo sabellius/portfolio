@@ -35,13 +35,24 @@ import { PROJECTS } from '../config';
                   <span class="text-xs text-text-dim">{tag.label}</span>
                 ))}
               </div>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block mt-auto pt-3 border-t border-dark-300 text-xs text-primary transition-colors duration-200 ease-out hover:text-primary-dark">
-                GitHub →
-              </a>
+              <div class="mt-auto pt-3 border-t border-dark-300 flex items-center gap-4 text-xs">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary transition-colors duration-200 ease-out hover:text-primary-dark">
+                  GitHub →
+                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-primary transition-colors duration-200 ease-out hover:text-primary-dark">
+                    Live Demo →
+                  </a>
+                )}
+              </div>
             </div>
           </article>
           );

@@ -119,7 +119,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     github: 'https://github.com/sabellius/agalapp',
-    demo: null,
+    demo: 'https://agalapp.saveliyshiryaev.dev',
     image: '/images/projects/agalapp.png',
   },
 ];
