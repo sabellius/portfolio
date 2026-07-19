@@ -73,7 +73,7 @@ export const TIMELINE: TimelineSection[] = [
       },
       {
         title: 'Full-Stack Developer Program',
-        organization: 'WeCode — Reichman University',
+        organization: 'WeCode - Reichman University',
         period: '2019 – 2020',
         description:
           'Professional full-stack web development training in partnership with Experis Software R&D.',
