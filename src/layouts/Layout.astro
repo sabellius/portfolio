@@ -1,7 +1,19 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { SITE_CONFIG, CURRENT_ROLE } from '../config';
 import '../styles/global.css';
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Saveliy Shiryaev',
+  jobTitle: CURRENT_ROLE.title,
+  worksFor: { '@type': 'Organization', name: 'Credit Box LTD' },
+  url: 'https://saveliyshiryaev.dev/',
+  email: 'mailto:saveliy.dev@pm.me',
+  sameAs: [SITE_CONFIG.github, SITE_CONFIG.linkedin],
+};
 ---
 
 <!doctype html>
@@ -30,6 +42,7 @@ import '../styles/global.css';
     <meta name="twitter:title" content="Saveliy Shiryaev · Full-Stack Developer" />
     <meta name="twitter:description" content="Full-stack developer (React, Node.js, TypeScript) at Credit Box, building a credit reconciliation platform for Israeli fintech." />
     <meta name="twitter:image" content="https://saveliyshiryaev.dev/images/og.png" />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   </head>
   <body class="font-sans antialiased bg-body text-text-light">
     <a
