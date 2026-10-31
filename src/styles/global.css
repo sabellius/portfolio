@@ -93,7 +93,7 @@
   }
 
   .skill-pill {
-    @apply bg-glow-sm text-text-light px-3 py-[5px] rounded text-xs cursor-default transition-colors duration-200 ease-out hover:bg-glow-md hover:text-text-bright;
+    @apply bg-glow-sm text-text-light px-3 py-[5px] rounded text-label cursor-default transition-colors duration-200 ease-out hover:bg-glow-md hover:text-text-bright;
   }
 }
 
