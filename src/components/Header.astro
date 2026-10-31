@@ -12,7 +12,7 @@ const navItems = [
     <div class="flex items-center justify-between h-16">
       <button
         id="mobile-menu-button"
-        class="md:hidden p-2 text-gray-300 hover:text-white"
+        class="md:hidden p-2 text-text-light hover:text-heading"
         aria-label="Toggle menu"
         aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -34,7 +34,7 @@ const navItems = [
             <li>
               <a
                 href={item.href}
-                class="nav-link relative block text-sm font-medium text-gray-300 tracking-[2px] uppercase py-3 px-4 -mx-4 hover:text-primary md:hover:bg-transparent transition-colors duration-200 cursor-pointer"
+                class="nav-link relative block text-sm font-medium text-text-light tracking-[2px] uppercase py-3 px-4 -mx-4 hover:text-primary md:hover:bg-transparent transition-colors duration-200 cursor-pointer"
                 data-section={item.href.slice(1)}>
                 {item.label}
               </a>
@@ -76,14 +76,14 @@ const navItems = [
       if (entry.isIntersecting) {
         navLinksAll.forEach(link => {
           link.classList.remove('text-primary', 'active');
-          link.classList.add('text-gray-300');
+          link.classList.add('text-text-light');
         });
 
         const activeLink = document.querySelector(
           `.nav-link[data-section="${entry.target.id}"]`
         );
         if (activeLink) {
-          activeLink.classList.remove('text-gray-300');
+          activeLink.classList.remove('text-text-light');
           activeLink.classList.add('text-primary', 'active');
         }
       }
@@ -95,7 +95,7 @@ const navItems = [
   if (window.scrollY < 100) {
     const firstLink = document.querySelector('.nav-link[data-section="hero"]');
     if (firstLink) {
-      firstLink.classList.remove('text-gray-300');
+      firstLink.classList.remove('text-text-light');
       firstLink.classList.add('text-primary', 'active');
     }
   }
