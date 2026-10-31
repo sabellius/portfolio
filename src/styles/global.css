@@ -37,6 +37,7 @@
   --type-label-xs: 0.6875rem;
   --type-label: 0.8125rem;
   --type-title: 2rem;
+  --type-display-sm: 2.625rem;
   --type-display: 3.625rem;
 }
 
@@ -68,6 +69,7 @@
   --text-label-xs: var(--type-label-xs);
   --text-label: var(--type-label);
   --text-title: var(--type-title);
+  --text-display-sm: var(--type-display-sm);
   --text-display: var(--type-display);
 }
 
