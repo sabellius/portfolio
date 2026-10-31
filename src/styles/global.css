@@ -133,7 +133,7 @@ body {
   }
 }
 
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -159,6 +159,7 @@ body {
     animation-duration: 0.01ms !important;
   }
 
+  .js .reveal,
   .reveal {
     opacity: 1;
     transform: none;
