@@ -5,6 +5,8 @@
 @import '@fontsource/outfit/700.css';
 
 :root {
+  color-scheme: dark;
+
   --mint-400: oklch(0.773 0.153 163.2);
   --mint-500: oklch(0.696 0.149 162.5);
 
