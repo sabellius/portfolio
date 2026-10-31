@@ -22,10 +22,10 @@
   --accent: var(--mint-400);
   --accent-strong: var(--mint-500);
   --text-heading: oklch(0.984 0.003 247.9);
-  --text-bright: oklch(1 0 0 / 0.6);
-  --text-light: oklch(1 0 0 / 0.5);
-  --text-muted: oklch(1 0 0 / 0.4);
-  --text-dim: oklch(1 0 0 / 0.3);
+  --text-bright: oklch(1 0 0 / 0.85);
+  --text-light: oklch(1 0 0 / 0.72);
+  --text-muted: oklch(1 0 0 / 0.6);
+  --text-dim: oklch(1 0 0 / 0.48);
   --glow-sm: oklch(0.773 0.153 163.2 / 0.06);
   --glow-md: oklch(0.773 0.153 163.2 / 0.12);
   --glow-lg: oklch(0.773 0.153 163.2 / 0.15);
