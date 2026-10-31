@@ -77,6 +77,7 @@ const navItems = [
         navLinksAll.forEach(link => {
           link.classList.remove('text-primary', 'active');
           link.classList.add('text-text-light');
+          link.removeAttribute('aria-current');
         });
 
         const activeLink = document.querySelector(
@@ -85,6 +86,7 @@ const navItems = [
         if (activeLink) {
           activeLink.classList.remove('text-text-light');
           activeLink.classList.add('text-primary', 'active');
+          activeLink.setAttribute('aria-current', 'true');
         }
       }
     });
