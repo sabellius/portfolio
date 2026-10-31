@@ -34,3 +34,6 @@ AGENTS.md
 
 # playwright-cli artifacts
 .playwright-cli/
+
+# LibreOffice lock files
+.~lock.*#
