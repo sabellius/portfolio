@@ -13,7 +13,7 @@ import { PROJECTS } from '../config';
         PROJECTS.map((project, i) => {
           const delay = i < 8 ? `reveal-delay-${i + 1}` : '';
           return (
-          <article class={`reveal ${delay} bg-card border-2 border-dark-300 rounded-xl overflow-hidden transition-colors duration-200 ease-out hover:border-glow-2xl cursor-pointer flex flex-col`} data-reveal>
+          <article class={`reveal ${delay} bg-card border-2 border-dark-300 rounded-xl overflow-hidden transition-colors duration-200 ease-out hover:border-glow-2xl flex flex-col`} data-reveal>
             {project.image && (
               <div class="w-full">
                 <img
