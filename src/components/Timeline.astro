@@ -8,7 +8,7 @@ import { TIMELINE } from '../config';
       <h2 class="section-heading">Experience &amp; Education</h2>
     </div>
 
-    <div class="max-w-[600px] space-y-10 mt-10">
+    <div class="max-w-4xl space-y-10 mt-10">
       {
         TIMELINE.map(section => (
           <div>
@@ -18,12 +18,14 @@ import { TIMELINE } from '../config';
                 const isLast = i === section.entries.length - 1;
                 const delay = i < 8 ? `reveal-delay-${i + 1}` : '';
                 return (
-                  <div class={`reveal ${delay} relative pl-7 pb-6 ${isLast ? 'border-l border-transparent' : 'border-l border-glow-lg'}`} data-reveal>
-                    <div class="absolute left-[-4px] top-1 w-[7px] h-[7px] rounded-full bg-primary" />
-                    <p class="text-xs text-primary mb-1">{entry.period}</p>
-                    <h4 class="text-base font-semibold text-white">{entry.title}</h4>
-                    <p class="text-label text-text-dim mb-1">{entry.organization}</p>
-                    {entry.description && <p class="text-sm text-text-muted leading-relaxed">{entry.description}</p>}
+                  <div class={`reveal ${delay} grid grid-cols-1 sm:grid-cols-[110px_1fr] gap-x-6`} data-reveal>
+                    <p class="text-xs text-primary mb-1 sm:mb-0 sm:pt-0.5 sm:text-right">{entry.period}</p>
+                    <div class={`relative pl-7 ${isLast ? '' : 'border-l border-glow-lg pb-7'}`}>
+                      <div class="absolute left-[-4px] top-2 w-[7px] h-[7px] rounded-full bg-primary" />
+                      <h4 class="text-base font-semibold text-white">{entry.title}</h4>
+                      <p class="text-label text-text-dim mb-1">{entry.organization}</p>
+                      {entry.description && <p class="text-sm text-text-muted leading-relaxed">{entry.description}</p>}
+                    </div>
                   </div>
                 );
               })}
