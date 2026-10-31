@@ -8,6 +8,11 @@ export const SITE_CONFIG = {
   email: 'mailto:saveliy.dev@pm.me',
 } as const;
 
+export const CURRENT_ROLE = {
+  title: 'Full-Stack Developer',
+  company: 'Credit Box',
+} as const;
+
 interface Tag {
   icon: string;
   label: string;
