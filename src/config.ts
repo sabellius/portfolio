@@ -1,6 +1,10 @@
 /**
  * Site-wide configuration
  */
+import type { ImageMetadata } from 'astro';
+import kanboxImg from './assets/projects/kanbox.png';
+import agalappImg from './assets/projects/agalapp.png';
+
 export const SITE_CONFIG = {
   resumeUrl: '/documents/Saveliy_Shiryaev_Fullstack_Developer_Resume.pdf',
   github: 'https://github.com/sabellius',
@@ -26,7 +30,7 @@ interface Project {
   tags: Tag[];
   github: string;
   demo: string | null;
-  image: string;
+  image: ImageMetadata;
 }
 
 interface SkillCategory {
@@ -113,7 +117,7 @@ export const PROJECTS: Project[] = [
     ],
     github: 'https://github.com/sabellius/kanbox',
     demo: null,
-    image: '/images/projects/kanbox.png',
+    image: kanboxImg,
   },
   {
     title: 'Agalapp',
@@ -132,7 +136,7 @@ export const PROJECTS: Project[] = [
     ],
     github: 'https://github.com/sabellius/agalapp',
     demo: 'https://agalapp.saveliyshiryaev.dev',
-    image: '/images/projects/agalapp.png',
+    image: agalappImg,
   },
 ];
 

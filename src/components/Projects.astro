@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { PROJECTS } from '../config';
 ---
 <section id="projects" class="py-20 sm:py-20 bg-dark-100">
@@ -16,11 +17,12 @@ import { PROJECTS } from '../config';
           <article class={`reveal ${delay} bg-card border-2 border-dark-300 rounded-xl overflow-hidden transition-[border-color,transform] duration-200 ease-out hover:border-glow-2xl hover:-translate-y-0.5 flex flex-col`} data-reveal>
             {project.image && (
               <div class="w-full">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  width={1920}
-                  height={958}
+                  widths={[650, 880]}
+                  sizes="(min-width: 768px) 434px, 100vw"
+                  quality={95}
                   class="w-full h-[180px] object-cover"
                   loading="lazy"
                   decoding="async"
