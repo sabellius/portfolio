@@ -4,8 +4,8 @@ import { TIMELINE } from '../config';
 <section id="experience" class="py-20 sm:py-20 bg-dark-100">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="reveal" data-reveal>
-      <p class="text-[11px] sm:text-xs uppercase tracking-[3px] text-primary mb-2.5">Background</p>
-      <h2 class="text-[32px] font-bold text-white mb-3">Experience & Education</h2>
+      <p class="section-label">Background</p>
+      <h2 class="section-heading">Experience &amp; Education</h2>
     </div>
 
     <div class="max-w-[600px] space-y-10 mt-10">
@@ -22,7 +22,7 @@ import { TIMELINE } from '../config';
                     <div class="absolute left-[-4px] top-1 w-[7px] h-[7px] rounded-full bg-primary" />
                     <p class="text-xs text-primary mb-1">{entry.period}</p>
                     <h4 class="text-base font-semibold text-white">{entry.title}</h4>
-                    <p class="text-[13px] text-text-dim mb-1">{entry.organization}</p>
+                    <p class="text-label text-text-dim mb-1">{entry.organization}</p>
                     {entry.description && <p class="text-sm text-text-muted leading-relaxed">{entry.description}</p>}
                   </div>
                 );

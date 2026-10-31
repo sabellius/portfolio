@@ -32,22 +32,17 @@ import { SITE_CONFIG } from '../config';
   <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="max-w-4xl">
       <p class="hero-animate hero-delay-1 text-[11px] sm:text-xs uppercase tracking-[4px] text-primary mb-6">Full-Stack Developer</p>
-      <h1 class="hero-animate hero-delay-2 text-[58px] sm:text-[58px] lg:text-[58px] font-bold text-white leading-[1.1] mb-3.5">
+      <h1 class="hero-animate hero-delay-2 text-display font-bold text-white leading-[1.1] mb-3.5">
         Hi, I'm <span class="name-gradient">Saveliy</span>
       </h1>
       <p class="hero-animate hero-delay-2 text-lg text-text-muted max-w-[500px] leading-relaxed mb-8">
         I ship software that works when the demo is over.
       </p>
       <div class="hero-animate hero-delay-3 flex flex-wrap gap-3">
-        <a
-          href="#projects"
-          class="inline-block px-7 py-[11px] bg-primary text-dark-100 font-semibold rounded-lg text-sm cursor-pointer transition-all duration-200 ease-out hover:brightness-110 hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_12px_var(--color-glow-xl)]">
+        <a href="#projects" class="btn-primary">
           View Projects
         </a>
-        <a
-          href={SITE_CONFIG.resumeUrl}
-          download
-          class="inline-block px-7 py-[11px] border border-border-subtle text-text-bright rounded-lg text-sm cursor-pointer transition-all duration-200 ease-out hover:bg-primary hover:text-dark-100 hover:border-primary active:scale-[0.98]">
+        <a href={SITE_CONFIG.resumeUrl} download class="btn-outline">
           Resume ↓
         </a>
       </div>

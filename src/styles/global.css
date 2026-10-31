@@ -4,33 +4,95 @@
 @import '@fontsource/outfit/600.css';
 @import '@fontsource/outfit/700.css';
 
-@layer base {
-  :root {
-    --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
-  }
+:root {
+  --mint-400: oklch(0.773 0.153 163.2);
+  --mint-500: oklch(0.696 0.149 162.5);
+
+  --ink-950: oklch(0.122 0 0);
+  --ink-900: oklch(0.145 0 0);
+  --ink-800: oklch(0.191 0 0);
+  --ink-700: oklch(0.218 0 0);
+
+  --bg-base: var(--ink-950);
+  --bg-raised: var(--ink-900);
+  --bg-overlay: var(--ink-800);
+  --line-default: var(--ink-700);
+  --line-subtle: oklch(1 0 0 / 0.2);
+  --line-accent: oklch(0.773 0.153 163.2 / 0.25);
+  --accent: var(--mint-400);
+  --accent-strong: var(--mint-500);
+  --text-heading: oklch(0.984 0.003 247.9);
+  --text-bright: oklch(1 0 0 / 0.6);
+  --text-light: oklch(1 0 0 / 0.5);
+  --text-muted: oklch(1 0 0 / 0.4);
+  --text-dim: oklch(1 0 0 / 0.3);
+  --glow-sm: oklch(0.773 0.153 163.2 / 0.06);
+  --glow-md: oklch(0.773 0.153 163.2 / 0.12);
+  --glow-lg: oklch(0.773 0.153 163.2 / 0.15);
+  --glow-xl: oklch(0.773 0.153 163.2 / 0.2);
+  --glow-2xl: oklch(0.773 0.153 163.2 / 0.3);
+
+  --type-label-xs: 0.6875rem;
+  --type-label: 0.8125rem;
+  --type-title: 2rem;
+  --type-display: 3.625rem;
 }
 
 @theme {
-  --color-primary: #34D399;
-  --color-primary-dark: #10B981;
-  --color-dark-100: #0A0A0A;
-  --color-dark-200: #111111;
-  --color-dark-300: #1a1a1a;
-  --color-dark-400: #141414;
-  --color-body: #060606;
-  --color-card: #141414;
-  --color-heading: #F8FAFC;
-  --color-border-accent: rgba(52,211,153,0.25);
-  --color-glow-sm: rgba(52,211,153,0.06);
-  --color-glow-md: rgba(52,211,153,0.12);
-  --color-glow-lg: rgba(52,211,153,0.15);
-  --color-glow-xl: rgba(52,211,153,0.2);
-  --color-glow-2xl: rgba(52,211,153,0.3);
-  --color-text-bright: rgba(255,255,255,0.60);
-  --color-text-light: rgba(255,255,255,0.50);
-  --color-text-muted: rgba(255,255,255,0.40);
-  --color-text-dim: rgba(255,255,255,0.30);
-  --color-border-subtle: rgba(255,255,255,0.20);
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --shadow-glow: 0 0 12px var(--glow-xl);
+}
+
+@theme inline {
+  --color-primary: var(--accent);
+  --color-primary-dark: var(--accent-strong);
+  --color-body: var(--bg-base);
+  --color-dark-100: var(--bg-raised);
+  --color-dark-300: var(--line-default);
+  --color-dark-400: var(--bg-overlay);
+  --color-card: var(--bg-overlay);
+  --color-heading: var(--text-heading);
+  --color-text-bright: var(--text-bright);
+  --color-text-light: var(--text-light);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
+  --color-glow-sm: var(--glow-sm);
+  --color-glow-md: var(--glow-md);
+  --color-glow-lg: var(--glow-lg);
+  --color-glow-xl: var(--glow-xl);
+  --color-glow-2xl: var(--glow-2xl);
+  --color-border-subtle: var(--line-subtle);
+  --color-border-accent: var(--line-accent);
+  --text-label-xs: var(--type-label-xs);
+  --text-label: var(--type-label);
+  --text-title: var(--type-title);
+  --text-display: var(--type-display);
+}
+
+@layer components {
+  .section-label {
+    @apply text-label-xs sm:text-xs uppercase tracking-[3px] text-primary mb-2.5;
+  }
+
+  .section-heading {
+    @apply text-title font-bold text-white mb-3;
+  }
+
+  .btn-primary {
+    @apply inline-block px-7 py-[11px] bg-primary text-dark-100 font-semibold rounded-lg text-sm cursor-pointer transition-all duration-200 ease-out hover:brightness-110 hover:scale-[1.03] active:scale-[0.98] shadow-glow;
+  }
+
+  .btn-outline {
+    @apply inline-block px-7 py-[11px] border border-border-subtle text-text-bright rounded-lg text-sm cursor-pointer transition-all duration-200 ease-out hover:bg-primary hover:text-dark-100 hover:border-primary active:scale-[0.98];
+  }
+
+  .btn-accent {
+    @apply px-5 py-2 border border-border-accent text-primary rounded-md text-label cursor-pointer transition-all duration-200 ease-out hover:bg-primary hover:text-dark-100 hover:border-primary active:scale-[0.98];
+  }
+
+  .skill-pill {
+    @apply bg-glow-sm text-text-light px-3 py-[5px] rounded text-xs cursor-default transition-colors duration-200 ease-out hover:bg-glow-md hover:text-text-bright;
+  }
 }
 
 html {

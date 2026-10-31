@@ -4,8 +4,8 @@ import { SKILL_CATEGORIES } from '../config';
 <section id="skills" class="py-20 sm:py-20 bg-body">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="reveal" data-reveal>
-      <p class="text-[11px] sm:text-xs uppercase tracking-[3px] text-primary mb-2.5">Toolkit</p>
-      <h2 class="text-[32px] font-bold text-white mb-3">Skills</h2>
+      <p class="section-label">Toolkit</p>
+      <h2 class="section-heading">Skills</h2>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[640px] mt-10">
@@ -19,7 +19,7 @@ import { SKILL_CATEGORIES } from '../config';
             </h3>
             <div class="flex flex-wrap gap-2">
               {category.skills.map(skill => (
-                <span class="bg-glow-sm text-text-light px-3 py-[5px] rounded text-xs cursor-default transition-colors duration-200 ease-out hover:bg-glow-md hover:text-text-bright">
+                <span class="skill-pill">
                   {skill}
                 </span>
               ))}
