@@ -9,12 +9,13 @@ export const SITE_CONFIG = {
   resumeUrl: '/documents/Saveliy_Shiryaev_Fullstack_Developer_Resume.pdf',
   github: 'https://github.com/sabellius',
   linkedin: 'https://linkedin.com/in/saveliy-shiryaev',
-  email: 'mailto:saveliy.dev@pm.me',
+  email: 'saveliy.dev@pm.me',
 } as const;
 
 export const CURRENT_ROLE = {
   title: 'Full-Stack Developer',
   company: 'Credit Box',
+  companyFull: 'Credit Box LTD',
 } as const;
 
 interface Tag {

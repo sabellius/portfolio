@@ -9,9 +9,9 @@ const personSchema = {
   '@type': 'Person',
   name: 'Saveliy Shiryaev',
   jobTitle: CURRENT_ROLE.title,
-  worksFor: { '@type': 'Organization', name: 'Credit Box LTD' },
+  worksFor: { '@type': 'Organization', name: CURRENT_ROLE.companyFull },
   url: 'https://saveliyshiryaev.dev/',
-  email: 'mailto:saveliy.dev@pm.me',
+  email: SITE_CONFIG.email,
   sameAs: [SITE_CONFIG.github, SITE_CONFIG.linkedin],
 };
 ---
