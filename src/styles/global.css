@@ -27,7 +27,7 @@
   --text-bright: oklch(1 0 0 / 0.85);
   --text-light: oklch(1 0 0 / 0.72);
   --text-muted: oklch(1 0 0 / 0.6);
-  --text-dim: oklch(1 0 0 / 0.48);
+  --text-dim: oklch(1 0 0 / 0.52);
   --glow-sm: oklch(0.773 0.153 163.2 / 0.06);
   --glow-md: oklch(0.773 0.153 163.2 / 0.12);
   --glow-lg: oklch(0.773 0.153 163.2 / 0.15);
