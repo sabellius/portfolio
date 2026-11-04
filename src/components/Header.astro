@@ -1,9 +1,9 @@
 ---
 const navItems = [
-  { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
+  { href: '/#about', section: 'about', label: 'About' },
+  { href: '/#experience', section: 'experience', label: 'Experience' },
+  { href: '/#skills', section: 'skills', label: 'Skills' },
+  { href: '/#projects', section: 'projects', label: 'Projects' },
 ];
 ---
 
@@ -21,7 +21,7 @@ const navItems = [
       </button>
 
       <a
-        href="#hero"
+        href="/#hero"
         class="font-display text-xl font-semibold tracking-wide text-heading hover:opacity-90 transition-opacity flex items-center">
         saveliy<span class="text-primary">.</span>
       </a>
@@ -35,7 +35,7 @@ const navItems = [
               <a
                 href={item.href}
                 class="nav-link relative block text-center md:text-left text-sm font-medium text-text-light tracking-[2px] uppercase py-3 px-4 -mx-4 md:mx-0 hover:text-primary md:hover:bg-transparent transition-colors duration-200 cursor-pointer"
-                data-section={item.href.slice(1)}>
+                data-section={item.section}>
                 {item.label}
               </a>
             </li>
